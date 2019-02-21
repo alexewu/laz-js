@@ -37,10 +37,17 @@
             $scope.error = "Could not read";
         };
         
-        $scope.search = function(username) {
-            $http.get("https://api.github.com/api/"+ kid + "/" + teacher)
-            .then(onUserComplete, onError)
-        }
+        $http({
+            method: 'GET',
+            url: 'api/{bookid}/timestamp',
+            params: {teacher: teacher, kid: kid}
+        }).then(onUserComplete, onError);
+        
+        
+//        $scope.search = function(teacher_name, kid_name) {
+//            $http(.get("api/{bookid}/timestamp")
+//            .then(onUserComplete, onError))
+//        }
 
         $scope.username = "HELLO MY LAZ FRIENDS";
         $scope.message = "Working with Github API";
