@@ -38,7 +38,7 @@
         };
         
         $scope.search = function(username) {
-            $http.get("https://api.github.com/users/" + username)
+            $http.get("https://api.github.com/api/"+ kid + "/" + teacher)
             .then(onUserComplete, onError)
         }
 
