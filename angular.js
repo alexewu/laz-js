@@ -37,12 +37,13 @@
             $scope.error = "Could not read";
         };
         
-        $http({
-            method: 'GET',
-            url: 'api/{bookid}/timestamp',
-            params: {teacher: teacher, kid: kid}
-        }).then(onUserComplete, onError);
-        
+        $scope.search = function(teacher_name, kid_name) {
+            $http({
+                method: 'GET',
+                url: 'api/' + bookid + '/timestamp',
+                params: {teacher: teacher_name, kid: kid_name}
+            }).then(onUserComplete, onError);
+        }
         
 //        $scope.search = function(teacher_name, kid_name) {
 //            $http(.get("api/{bookid}/timestamp")
