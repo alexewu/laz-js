@@ -9,47 +9,93 @@
         <link rel="stylesheet" href="style.css" />
         <script src="angular.js"></script>
     </head>
-   
-   
+
+
     <body ng-controller="MainController" >
-        <h1>{{ message }}</h1>
-        
+        <h1>Results for student-name</h1>
+
         <div> {{ error }} </div>
         
-        {{ username }}
-        <form name="searchUser" ng-submit="search(username)">
-            <input type="search" placeholder="username to find" ng-model="username" />
-            <input type="submit" placeholder="Search"s/>
-        </form>
+        
         
         <div>
-            <h2> {{ user.name }} </h2>
-            <img ng-src="{{user.avatar_url}}" title="{{user.name}}"/>
+            <table style="width:50%">
+                <tr>
+                    <td>Omission</td>
+                    <td> 5 </td>
+                </tr>
+                <tr>
+                    <td>Insertion</td>
+                    <td> 4 </td>
+                </tr>
+                <tr>
+                    <td>Self-Correction</td>
+                    <td> 1 </td>
+                </tr>
+                <tr>
+                    <td>No Errors</td>
+                    <td> 6 </td>
+                </tr>
+            </table>
+
+            <br><br><br>
+
+            <table style="width:50%">
+                <tr>
+                    <td>WPM</td>
+                    <td> 50 </td>
+                </tr>
+                <tr>
+                    <td>WCPM</td>
+                    <td> 40 </td>
+                </tr>
+                <tr>
+                    <td>Accuracy</td>
+                    <td> 90% </td>
+                </tr>
+            </table>
+
+            <br><br><br>
         </div>
         
-        Order:
-        <select ng-model="repoSortOrder">
-            <option value="+name">Name</option>
-            <option value="+stargazers_count">Stars</option>
-            <option value="+language">Language</option>
-        </select>
         
-        <table>
+        
+        <!-- Table for each high frequency word -->
+        <table style="width:100%">
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Stars</th>
-                    <th>Language</th>
+                    <th> Word Number </th>
+                    <th> Word </th>
+                    <th> Grade </th>
+                    <th> Confidence Level </th>
+                    <th> Pronounciation </th>
+                    <th> Notes </th>
+                    <th> Play </th>
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="repo in repos | orderBy:repoSortOrder">
-                    <td>{{repo.name}}</td>
-                    <td>{{repo.stargazers_count | number}}</td>
-                    <td>{{repo.language}}</td>
+                <tr ng-repeat="word in words">
+                    <td> {{ word.word }} </td>
+                    <td> {{ word.grade }} </td>
+                    <td> {{ word.confidence }} </td>
+                    <td> {{ word.pronounciation }} </td>
+                    <td> {{ word.notes }} </td>
+                    <td> {{ word.audio }} </td>
                 </tr>
             </tbody>
         </table>
+        
+        <input type="submit" value="Download MP3">
+        <input type="submit" value="Print Result">
+        <input type="submit" value="EDIT">
     </body>
-
+    
+    <br><br><br><br><br>
+    
+    <form>
+      Notes:<br>
+      <input style="height:200px;width:800px;" type="text" name="lastname">
+      <br><br>
+      <input type="submit" value="Submit">
+    </form>
 </html>
