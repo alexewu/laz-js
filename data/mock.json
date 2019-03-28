@@ -1,0 +1,84 @@
+{
+    "timestamps" : {
+        "hello" : 2.35,
+        "the" : 4.24,
+        "ant" : 6.67,
+        "are" : 8.93,
+        "today" : 10.23,
+        "fun" : 12.11,
+        "play" : 14.56,
+        "time" : 16.93,
+        "yes" : 18.43
+    },
+    "running_record_score" : {
+        "running_record_score_id": 1234123,
+        "recording_id": 1234,
+        "start_time": 0.20,
+        "end_time": 15.35,
+        "start_word": "hello",
+        "end_word": "yes",
+        "word_count": 4,
+        "omission_count": 1,
+        "incorrect_count": 1,
+        "insertion_count": 2,
+        "mispronunciation_count": 2,
+        "substitution_count": 6,
+        "repetition_count": 1,
+        "self_correction_count": 1,
+        "wcpm_count": 4.56,
+        "wpm_count": 3.67,
+        "error_rate": 3,
+        "self_correction_rate": 5,
+        "accuracy_rate": 2,
+        "PRIMARY KEY": "3423ASDF",
+        "UNIQUE ID": "80432NSD"
+    },
+    "errors" : [
+        {
+            "running_record_error_id": "error_1",
+            "running_record_score_id": 1234123,
+            "word_index": 0,
+            "error": "selfcorrection",
+            "running_record_error_type_id": "6438fhsd8",
+            "spoken_words": "hallo",
+            "recording_start_at_in_millisecond": 2.35,
+            "PRIMARY KEY": "7893h492",
+            "KEY": "7834js0d"
+        },
+        {
+            "running_record_error_id": "error_2",
+            "running_record_score_id": 1234123,
+            "word_index": 3,
+            "error": "omission",
+            "running_record_error_type_id": "6438fhsd8",
+            "spoken_words": "do day",
+            "recording_start_at_in_millisecond": 10.23,
+            "PRIMARY KEY": "7893h492",
+            "KEY": "7834js0d"
+        },
+        {
+            "running_record_error_id": "error_3",
+            "running_record_score_id": 1234123,
+            "word_index": 5,
+            "error": "incorrect",
+            "running_record_error_type_id": "6438fhsd8",
+            "spoken_words": "do day",
+            "recording_start_at_in_millisecond": 10.23,
+            "PRIMARY KEY": "7893h492",
+            "KEY": "7834js0d"
+        },
+        {
+            "running_record_error_id": "error_4",
+            "running_record_score_id": 1234123,
+            "word_index": 6,
+            "error": "insertion",
+            "running_record_error_type_id": "6438fhsd8",
+            "spoken_words": "do day",
+            "recording_start_at_in_millisecond": 10.23,
+            "PRIMARY KEY": "7893h492",
+            "KEY": "7834js0d"
+        }
+    ]
+    
+
+}

@@ -20,16 +20,21 @@
         };
         
         //now can use the student variable in the api get call
-        $scope.search = function(student){
-            var mainInfo = $http({method: 'GET', url: 'http://mdp.learninga-z.com/api/students'})
-            .then(function(data) { 
-                console.log(json.loads(data));
-            });
-        }
+//        $scope.search = function(student){
+//            var mainInfo = $http({method: 'GET', url: 'http://mdp.learninga-z.com/api/students'})
+//            .then(function(data) { 
+//                console.log(json.loads(data));
+//            });
+//        }
 
-        $scope.username = "HELLO MY LAZ FRIENDS";
         $scope.message = "Teacher Front End";
-        $scope.repoSortOrder = "-stargazers_count";
+        
+        $http.get('data/mock.json').success(function(data){
+            $scope.info = data;
+            console.log(json.loads(data));
+        });
+        
+        
     };
     
     app.controller("MainController", MainController)
