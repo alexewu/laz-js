@@ -1,15 +1,88 @@
 {
-    "timestamps" : {
-        "hello" : 2.35,
-        "the" : 4.24,
-        "ant" : 6.67,
-        "are" : 8.93,
-        "today" : 10.23,
-        "fun" : 12.11,
-        "play" : 14.56,
-        "time" : 16.93,
-        "yes" : 18.43
-    },
+    "words" : [
+        {
+            "word_number": 1,
+            "word" : "hello",
+            "grade" : 123,
+            "confidence_level": 1,
+            "pronounciation": "heh-lo",
+            "notes": "Good Work",
+            "play": "hi"
+        },
+        {
+            "word_number": 2,
+            "word" : "the",
+            "grade" :234,
+            "confidence_level": 3,
+            "pronounciation": "de",
+            "notes":"Good Work",
+            "play": "hi"
+        },
+        {
+            "word_number": 3,
+            "word" : "ant",
+            "grade" :345,
+            "confidence_level": 4,
+            "pronounciation": "ant",
+            "notes":"Good Work",
+            "play": "hi"
+        },
+        {
+            "word_number": 4,
+            "word" : "are",
+            "grade" :456,
+            "confidence_level":4,
+            "pronounciation": "our",
+            "notes":"Good Work",
+            "play": "hi"
+        },
+        {
+            "word_number": 5,
+            "word" : "today",
+            "grade" :678,
+            "confidence_level": 4,
+            "pronounciation": "doday",
+            "Notes":"Good Work",
+            "play": "hi"
+        },
+        {
+            "word_number": 6,
+            "word" : "fun",
+            "grade" :789,
+            "confidence_level": 2,
+            "pronounciation": "hun",
+            "notes":"Good Work",
+            "play": "hi"
+        },
+        {
+            "word_number": 7,
+            "word" : "play",
+            "grade" :890,
+            "confidence_level":6,
+            "Pronounciation": "pway",
+            "Notes":"Good Work",
+            "play": "hi"
+        },
+        {
+            "word_number": 8,
+            "word" : "time",
+            "grade" :123,
+            "confidence_level":2,
+            "pronounciation": "dime",
+            "notes":"Good Work",
+            "play": "hi"
+        },
+        {
+            "word_number": 9,
+            "word" : "yes",
+            "grade" :345,
+            "confidence_level":5,
+            "pronounciation": "yus",
+            "notes":"Good Work",
+            "play": "hi"
+        }
+        
+    ],
     "running_record_score" : {
         "running_record_score_id": 1234123,
         "recording_id": 1234,

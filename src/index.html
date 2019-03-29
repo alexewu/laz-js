@@ -1,24 +1,58 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
 
-  <head>
+  <head class="content">
     <link rel="stylesheet" href="style.css">
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="angular.js"></script>
   </head>
 
-  <body ng-controller="MainController">
+  <body ng-controller="MainController" class="content">
     
-    {{info}}
-    {{message}}
+    <h1>Results for student</h1>
+    
+    <br><br>
+    <div>
+        <table style="width:50%">
+            <tr>
+                <td>Omission</td>
+                <td> 5 </td>
+            </tr>
+            <tr>
+                <td>Insertion</td>
+                <td> 4 </td>
+            </tr>
+            <tr>
+                <td>Self-Correction</td>
+                <td> 1 </td>
+            </tr>
+            <tr>
+                <td>No Errors</td>
+                <td> 6 </td>
+            </tr>
+        </table>
 
-    <br><br>
-<!--    <li ng-repeat="(word, time) in info.data.timestamps">{{word}}: {{time}}</li>-->
-    
-    <br><br>
-    
-<!--
-    <table style="width:50%">
+        <br><br><br>
+
+        <table style="width:50%">
+            <tr>
+                <td>WPM</td>
+                <td> {{info.data.running_record_score.wpm_count}} </td>
+            </tr>
+            <tr>
+                <td>WCPM</td>
+                <td> {{info.data.running_record_score.wcpm_count}} </td>
+            </tr>
+            <tr>
+                <td>Accuracy</td>
+                <td> {{info.data.running_record_score.accuracy_rate}} </td>
+            </tr>
+        </table>
+
+        <br><br><br>
+    </div>
+        
+      <table style="width:100%">
             <thead>
                 <tr>
                     <th> Word Number </th>
@@ -32,7 +66,6 @@
             </thead>
             <tbody>
                 <tr ng-repeat="word in info.data.words">
-
                     <td> {{word.word_number}} </td>
                     <td> {{word.word}} </td>
                     <td> {{word.grade}} </td>
@@ -43,8 +76,16 @@
                 </tr>
             </tbody>
         </table>
--->
+    <input type="submit" value="Download MP3">
+    <input type="submit" value="Print Result">
+    <input type="submit" value="EDIT">
 
   </body>
 
+    <form>
+      Notes:<br>
+      <input style="height:200px;width:800px;" type="text" name="lastname">
+      <br><br>
+      <input type="submit" value="Submit">
+    </form>
 </html>
