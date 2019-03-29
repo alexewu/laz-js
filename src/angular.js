@@ -2,38 +2,34 @@
     var app = angular.module('myApp', []);
     
     var MainController = function ($scope, $http) {
-            
+        
         var onUserComplete = function(response) {
             $scope.user = response.data;
-            //TO-DO: change $scope.user.repos_url to correct field of laz api
-            $http.get($scope.user.repos_url)
+            $http.get($scope.user.timestamps)
                 .then(onWords, onError);
         };
         
-        //funtion that fetches each word in the high frequency list
         var onWords = function(response) {
             $scope.words = response.data;
         }
-        
+
         var onError = function(reason) {
             $scope.error = "Could not read";
         };
         
-        //now can use the student variable in the api get call
-//        $scope.search = function(student){
-//            var mainInfo = $http({method: 'GET', url: 'http://mdp.learninga-z.com/api/students'})
-//            .then(function(data) { 
-//                console.log(json.loads(data));
-//            });
+//        $scope.search = function() {
+//            $http.get('mock.json')
+//            .then(onUserComplete, onError)
 //        }
 
         $scope.message = "Teacher Front End";
         
-        $http.get('data/mock.json').success(function(data){
+        $http.get('mock.json')
+        .then(function(data){
             $scope.info = data;
-            console.log(json.loads(data));
         });
         
+//        $scope.words = $scope.info.timestamps;
         
     };
     

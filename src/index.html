@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="angular.js"></script>
+  </head>
+
+  <body ng-controller="MainController">
+    
+    {{info}}
+    {{message}}
+
+    <br><br>
+<!--    <li ng-repeat="(word, time) in info.data.timestamps">{{word}}: {{time}}</li>-->
+    
+    <br><br>
+    
+<!--
+    <table style="width:50%">
+            <thead>
+                <tr>
+                    <th> Word Number </th>
+                    <th> Word </th>
+                    <th> Grade </th>
+                    <th> Confidence Level </th>
+                    <th> Pronounciation </th>
+                    <th> Notes </th>
+                    <th> Play </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="word in info.data.words">
+
+                    <td> {{word.word_number}} </td>
+                    <td> {{word.word}} </td>
+                    <td> {{word.grade}} </td>
+                    <td> {{word.confidence_level}} </td>
+                    <td> {{word.pronounciation}} </td>
+                    <td> {{ word.notes }} </td>
+                    <td> {{ word.playy }} </td>
+                </tr>
+            </tbody>
+        </table>
+-->
+
+  </body>
+
+</html>
