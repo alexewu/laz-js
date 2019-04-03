@@ -1,4 +1,4 @@
-(function() {
+(function(angular) {
     var app = angular.module('myApp', []);
     
     var MainController = function ($scope, $http) {

@@ -102,9 +102,7 @@
         "wpm_count": 3.67,
         "error_rate": 3,
         "self_correction_rate": 5,
-        "accuracy_rate": 2,
-        "PRIMARY KEY": "3423ASDF",
-        "UNIQUE ID": "80432NSD"
+        "accuracy_rate": 2
     },
     "errors" : [
         {
@@ -114,9 +112,7 @@
             "error": "selfcorrection",
             "running_record_error_type_id": "6438fhsd8",
             "spoken_words": "hallo",
-            "recording_start_at_in_millisecond": 2.35,
-            "PRIMARY KEY": "7893h492",
-            "KEY": "7834js0d"
+            "recording_start_at_in_millisecond": 2.35
         },
         {
             "running_record_error_id": "error_2",
@@ -125,9 +121,7 @@
             "error": "omission",
             "running_record_error_type_id": "6438fhsd8",
             "spoken_words": "do day",
-            "recording_start_at_in_millisecond": 10.23,
-            "PRIMARY KEY": "7893h492",
-            "KEY": "7834js0d"
+            "recording_start_at_in_millisecond": 10.23
         },
         {
             "running_record_error_id": "error_3",
@@ -136,9 +130,7 @@
             "error": "incorrect",
             "running_record_error_type_id": "6438fhsd8",
             "spoken_words": "do day",
-            "recording_start_at_in_millisecond": 10.23,
-            "PRIMARY KEY": "7893h492",
-            "KEY": "7834js0d"
+            "recording_start_at_in_millisecond": 10.23
         },
         {
             "running_record_error_id": "error_4",
@@ -147,9 +139,7 @@
             "error": "insertion",
             "running_record_error_type_id": "6438fhsd8",
             "spoken_words": "do day",
-            "recording_start_at_in_millisecond": 10.23,
-            "PRIMARY KEY": "7893h492",
-            "KEY": "7834js0d"
+            "recording_start_at_in_millisecond": 10.23
         }
     ]
     
