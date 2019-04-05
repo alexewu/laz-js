@@ -9,45 +9,58 @@
 
   <body ng-controller="MainController" class="content">
     
-    <h1>Results for student</h1>
-    
+    <h1>RECORDING REVIEW FOR ZACHARY SMITH</h1>
+
+    <div class="box border box-bg marginT padAll2">
+        <strong>Title:</strong> High-Frequency Words Assessment Set A        &nbsp;|&nbsp;
+        <strong>Recorded:</strong> 03/15/19&nbsp;|&nbsp;
+        <strong>Duration:</strong> 00:17
+    </div>
+
+    <br><br>
+
+    <h2>
+        <span class="valignM">Score This High-Frequency Words Assessment</span>
+        <span class="notBold xsm valignM">(<a href="https://www.readinga-z.com/auth/login.php?certificate=authorizer%3Dbundle%26userid%3D5813733%26expires%3D2019%252F04%252F06%2B02%253A29%253A53%26auth%3Dtrue%26hash%3DYdnYUye%252FQ7QjT2aFkHiT3A%253D%253D&amp;page_after_login=%2Fassessments%2Fhigh-frequency-words-assessment%2F" class="learnMoreLink">Learn more</a> about High-Frequency Words Assessments.)</span>
+    </h2>
+
+    <hr class="hr-dashed marginB2">
+
+    <table id="score-card">
+        <tbody><tr class="score-card-header">
+            <td colspan="3">Scorecard</td>
+        </tr>
+        <tr class="score-card-item-white" style="display: none;">
+            <td colspan="2" id="mispronunciations-field">Mispronunciations</td>
+            <td>0</td>
+        </tr>
+        <tr class="score-card-item-grey" style="display: none;">
+            <td colspan="2" id="substitutions-field">Substitutions</td>
+            <td>0</td>
+        </tr>
+        <tr class="score-card-sub-header">
+            <td colspan="2">Score</td>
+            <td></td>
+        </tr>
+        <tr class="score-card-item-white">
+            <td colspan="2" id="scored-word-count-field">Scored Word Count</td>
+            <td>3</td>
+        </tr>
+        <tr class="score-card-item-grey">
+            <td colspan="2" id="scored-duration-field">Total Word Count</td>
+            <td>5</td>
+        </tr>
+        <tr class="score-card-item-white">
+            <td colspan="2" id="accuracy-field">Accuracy</td>
+            <td>87%</td>
+        </tr>
+        <tr class="score-card-footer" style="display: none;">
+            <td colspan="3"><a href="https://www.raz-kids.com/main/ViewPage/name/RunningRecordInfo/context/teachercorner" target="_blank">Learn more</a> about the Running Record Scorecard.</td>
+        </tr>
+    </tbody></table>
+
     <br><br>
     <div>
-        <table style="width:50%">
-            <tr>
-                <td>Omission</td>
-                <td> 5 </td>
-            </tr>
-            <tr>
-                <td>Insertion</td>
-                <td> 4 </td>
-            </tr>
-            <tr>
-                <td>Self-Correction</td>
-                <td> 1 </td>
-            </tr>
-            <tr>
-                <td>No Errors</td>
-                <td> 6 </td>
-            </tr>
-        </table>
-
-        <br><br><br>
-
-        <table style="width:50%">
-            <tr>
-                <td>WPM</td>
-                <td> {{info.data.running_record_score.wpm_count}} </td>
-            </tr>
-            <tr>
-                <td>WCPM</td>
-                <td> {{info.data.running_record_score.wcpm_count}} </td>
-            </tr>
-            <tr>
-                <td>Accuracy</td>
-                <td> {{info.data.running_record_score.accuracy_rate}} </td>
-            </tr>
-        </table>
 
         <br><br><br>
     </div>
@@ -55,37 +68,50 @@
       <table style="width:100%">
             <thead>
                 <tr>
-                    <th> Word Number </th>
+                    <th> ID </th>
+                    <th> Accuracy </th>
                     <th> Word </th>
-                    <th> Grade </th>
-                    <th> Confidence Level </th>
                     <th> Pronounciation </th>
+                    <th> Length </th>
                     <th> Notes </th>
                     <th> Play </th>
+                    <th> Actions </th>
                 </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="word in info.data.words">
                     <td> {{word.word_number}} </td>
+                    <td> O/X </td>
                     <td> {{word.word}} </td>
-                    <td> {{word.grade}} </td>
-                    <td> {{word.confidence_level}} </td>
-                    <td> {{word.pronounciation}} </td>
-                    <td> {{ word.notes }} </td>
-                    <td> {{ word.playy }} </td>
+                    <td> {{word.pronounciation} </td>
+                    <td> [calculate length] </td>
+                    <td> {{word.notes}} </td>
+                    <td> [insert audio button] </td>
+                    <td> 
+                        <input type="submit" value="Edit"> 
+                    </td>
                 </tr>
             </tbody>
         </table>
-    <input type="submit" value="Download MP3">
-    <input type="submit" value="Print Result">
-    <input type="submit" value="EDIT">
 
   </body>
 
-    <form>
-      Notes:<br>
-      <input style="height:200px;width:800px;" type="text" name="lastname">
-      <br><br>
-      <input type="submit" value="Submit">
-    </form>
+  <br><br>
+    <div class="box-50 padR4 borderR">
+        <label class="box lg" for="message">
+            <strong>Message to Student</strong> (optional)
+        </label>
+        <textarea class="marginB input-fullWidth textarea-autogrow" name="message_to_student" id="message_to_student" maxlength="250" style="overflow: hidden; min-height: 2em;">Good Work!</textarea><div class="autogrow-textarea-mirror" style="display: none; word-wrap: break-word; padding: 4px 6px; width: 521px; font-family: &quot;Roboto Condensed&quot;, sans-serif; font-size: 15px; line-height: 21px;">Good Work!.<br>.</div>
+    </div>
+
+    <div class="box-50 padL4">
+        <label class="box lg">
+            <strong>Note to Self</strong> (optional)
+        </label>
+        <textarea class="input-fullWidth textarea-autogrow" name="note_to_self" id="note_to_self" maxlength="250" style="overflow: hidden; min-height: 2em;"></textarea><div class="autogrow-textarea-mirror" style="display: none; word-wrap: break-word; padding: 4px 6px; width: 522px; font-family: &quot;Roboto Condensed&quot;, sans-serif; font-size: 15px; line-height: 21px;">.<br>.</div>
+    </div>
+
+    <input type="submit" value="Download MP3">
+    <input type="submit" value="Print Result">
+    <input type="submit" value="EDIT">
 </html>

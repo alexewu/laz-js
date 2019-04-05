@@ -2,84 +2,66 @@
     "words" : [
         {
             "word_number": 1,
+            "accuracy": 1,
             "word" : "hello",
-            "grade" : 123,
-            "confidence_level": 1,
             "pronounciation": "heh-lo",
-            "notes": "Good Work",
-            "play": "hi"
+            "notes": "Good Work"
         },
         {
             "word_number": 2,
+            "accuracy": 0,
             "word" : "the",
-            "grade" :234,
-            "confidence_level": 3,
             "pronounciation": "de",
-            "notes":"Good Work",
-            "play": "hi"
+            "notes":"Good Work"
         },
         {
             "word_number": 3,
+            "accuracy": 0,
             "word" : "ant",
-            "grade" :345,
-            "confidence_level": 4,
             "pronounciation": "ant",
-            "notes":"Good Work",
-            "play": "hi"
+            "notes":"Good Work"
         },
         {
             "word_number": 4,
+            "accuracy": 1,
             "word" : "are",
-            "grade" :456,
-            "confidence_level":4,
             "pronounciation": "our",
-            "notes":"Good Work",
-            "play": "hi"
+            "notes":"Good Work"
         },
         {
             "word_number": 5,
+            "accuracy": 0,
             "word" : "today",
-            "grade" :678,
-            "confidence_level": 4,
             "pronounciation": "doday",
-            "Notes":"Good Work",
-            "play": "hi"
+            "Notes":"Good Work"
         },
         {
             "word_number": 6,
+            "accuracy": 0,
             "word" : "fun",
-            "grade" :789,
-            "confidence_level": 2,
             "pronounciation": "hun",
-            "notes":"Good Work",
-            "play": "hi"
+            "notes":"Good Work"
         },
         {
             "word_number": 7,
+            "accuracy": 1,
             "word" : "play",
-            "grade" :890,
-            "confidence_level":6,
             "Pronounciation": "pway",
-            "Notes":"Good Work",
-            "play": "hi"
+            "Notes":"Good Work"
         },
         {
             "word_number": 8,
+            "accuracy": 1,
             "word" : "time",
-            "grade" :123,
-            "confidence_level":2,
             "pronounciation": "dime",
-            "notes":"Good Work",
-            "play": "hi"
+            "notes":"Good Work"
         },
         {
             "word_number": 9,
+            "accuracy": 0,
             "word" : "yes",
-            "grade" :345,
-            "confidence_level":5,
             "pronounciation": "yus",
-            "notes":"Good Work",
-            "play": "hi"
+            "notes":"Good Work"
         }
         
     ],

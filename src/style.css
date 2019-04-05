@@ -6,3 +6,189 @@ table, th, td {
   max-width: 1000px;
   margin: auto;
 }
+
+/*title*/
+.h1, h1 {
+  display: block;
+  font-family: Comic Sans MS;
+  font-size: 1.85rem;
+  font-weight: 700;
+  margin: 2.2rem 0 1rem 0;
+  text-transform: uppercase;
+}
+
+/* box with title, recorded date and duration*/
+.border {
+  border: solid 1px #e0e0e0;
+}
+
+.box {
+  display: block;
+  float: none;
+}
+
+.padAll2 {
+  padding: 9px!important;
+}
+
+.marginT {
+  margin-top: 12px!important;
+}
+
+.box-bg {
+  background: #ededed;
+}
+
+/* Score this high frequency words assessment */
+.valignM {
+  display: inline-block;
+  vertical-align: middle!important;
+}
+
+.notBold {
+  font-weight: 400!important;
+}
+
+.xsm {
+  font-size: 80%!important;
+}
+
+.hr-dashed {
+  border-top-color: #ccc;
+  border-top-style: dashed;
+}
+
+/*scorecard*/
+#score-card tr {
+  height: 25px;
+}
+
+.score-card-header, .score-card-footer {
+  background: #FFCC66;
+}
+
+.score-card-header {
+  font-weight: 800;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+#assessment-rubric {
+  font-family: Verdana, sans-serif;
+}
+
+.score-card-sub-header {
+  font-weight: 800;
+  background: #FFF4A5;
+}
+
+.score-card-item-white {
+  background: #FFFFFF;
+}
+
+.score-card-item-grey {
+  background: #E8E8E8;
+}
+
+.score-card-header, .score-card-footer {
+  background: #FFCC66;
+}
+
+/*forms on the bottom*/
+.box-50 {
+  width: 50%;
+}
+
+.padR4 {
+  padding-right: 18px!important;
+}
+
+.borderR {
+  border-right: solid 1px #e0e0e0!important;
+}
+
+.lg {
+  font-size: 110%!important;
+}
+
+.box, .box-10, .box-15, .box-16, .box-20, .box-22, .box-25, .box-30, .box-33, .box-35, .box-40, .box-45, .box-5, .box-50, .box-55, .box-60, .box-65, .box-66, .box-67, .box-7, .box-70, .box-75, .box-78, .box-80, .box-85, .box-90, .box-95 {
+  box-sizing: border-box;
+  float: left;
+}
+
+.marginB {
+  margin-bottom: 12px!important;
+}
+
+.input-fullWidth {
+  margin-right: 0;
+  width: 100%!important;
+}
+
+textarea {
+  border: solid 1px #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #333;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0;
+  padding: 4px 6px;
+  resize: vertical;
+  vertical-align: top;
+  width: 300px;
+}
+
+textarea {
+  overflow: auto;
+}
+
+button, input, optgroup, select, textarea {
+  color: inherit;
+  font: inherit;
+}
+
+textarea {
+  -webkit-appearance: textarea;
+  background-color: white;
+  -webkit-rtl-ordering: logical;
+  flex-direction: column;
+  resize: auto;
+  cursor: text;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  border-width: 1px;
+  border-style: solid;
+  border-color: initial;
+  border-image: initial;
+  padding: 2px;
+}
+
+element.style {
+  display: none;
+  word-wrap: break-word;
+  padding: 4px 6px;
+  width: 521px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 15px;
+  line-height: 21px;
+}
+
+div {
+  display: block;
+}
+
+body, html {
+  color: #222;
+  font-family: "Roboto Condensed",sans-serif;
+  font-size: 15px;
+  line-height: 1.4;
+}
