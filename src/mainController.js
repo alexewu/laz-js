@@ -3,6 +3,7 @@
     
     var MainController = function ($scope, $http) {
         
+        console.log("hi");
         var onUserComplete = function(response) {
             $scope.user = response.data;
             $http.get($scope.user.timestamps)
@@ -21,29 +22,30 @@
 //            $http.get('mock.json')
 //            .then(onUserComplete, onError)
 //        }
-
+        console.log("BLAH");
         $scope.message = "Teacher Front End";
         $scope.Math = window.Math;
 
-        $http.get('mock.json')
-        .then(function(data){
+        // $http.get('mock.json')
+        // .then(function(data){
+        //     $scope.info = data;
+        // });
+        
+        // $http.get("http://mdp.learninga-z.com/api/timestamps/")
+        // .then(function(data){
+        //     console.log(data);
+        //     $scope.info = data;
+        // });
+
+        $http({
+            method: 'GET',
+            url: 'http://mdp.learninga-z.com/api/timestamps/',
+            credentials: 'Access-Control-Allow-Origin'
+        }).then(function(data){
+            console.log(data);
             $scope.info = data;
         });
-        
-        //find the difference between timestamps to get length
-        $scope.calcDiff = function(){
-            var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds    
-            var diffDays = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay)));
-            
-            return "00:39:34";
-        }
 
-
-        $scope.update = function() {
-            var result = 0;
-            result = $scope.info.data.word_count - $scope.info.data.incorrect_count;
-            $scope.accuracy = result;
-        };
     };
     
     app.controller("MainController", MainController)
