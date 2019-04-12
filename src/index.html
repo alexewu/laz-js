@@ -30,29 +30,21 @@
         <tbody><tr class="score-card-header">
             <td colspan="3">Scorecard</td>
         </tr>
-        <tr class="score-card-item-white" style="display: none;">
-            <td colspan="2" id="mispronunciations-field">Mispronunciations</td>
-            <td>0</td>
-        </tr>
-        <tr class="score-card-item-grey" style="display: none;">
-            <td colspan="2" id="substitutions-field">Substitutions</td>
-            <td>0</td>
-        </tr>
         <tr class="score-card-sub-header">
             <td colspan="2">Score</td>
             <td></td>
         </tr>
         <tr class="score-card-item-white">
             <td colspan="2" id="scored-word-count-field">Scored Word Count</td>
-            <td>3</td>
+            <td> {{info.data.high_frequency_score.incorrect_count}}</td>
         </tr>
         <tr class="score-card-item-grey">
             <td colspan="2" id="scored-duration-field">Total Word Count</td>
-            <td>5</td>
+            <td>{{info.data.high_frequency_score.word_count}}</td>
         </tr>
         <tr class="score-card-item-white">
             <td colspan="2" id="accuracy-field">Accuracy</td>
-            <td>87%</td>
+            <td> {{ 5/9 * 100 }}%</td>
         </tr>
         <tr class="score-card-footer" style="display: none;">
             <td colspan="3"><a href="https://www.raz-kids.com/main/ViewPage/name/RunningRecordInfo/context/teachercorner" target="_blank">Learn more</a> about the Running Record Scorecard.</td>
@@ -71,7 +63,6 @@
                     <th> ID </th>
                     <th> Accuracy </th>
                     <th> Word </th>
-                    <th> Pronounciation </th>
                     <th> Length </th>
                     <th> Notes </th>
                     <th> Play </th>
@@ -81,12 +72,14 @@
             <tbody>
                 <tr ng-repeat="word in info.data.words">
                     <td> {{word.word_number}} </td>
-                    <td> O/X </td>
+                    <td ng-if="word.accuracy == 1"> O </td>
+                    <td ng-if="word.accuracy == 0"> X </td>
                     <td> {{word.word}} </td>
-                    <td> {{word.pronounciation} </td>
-                    <td> [calculate length] </td>
+                    <td> {{word.end_time}} - {{word.start_time}} </td>
                     <td> {{word.notes}} </td>
-                    <td> [insert audio button] </td>
+                    <td> 
+                        <input type="submit" value="Play"> 
+                    </td>
                     <td> 
                         <input type="submit" value="Edit"> 
                     </td>
@@ -113,5 +106,5 @@
 
     <input type="submit" value="Download MP3">
     <input type="submit" value="Print Result">
-    <input type="submit" value="EDIT">
+    <input type="submit" value="Save">
 </html>

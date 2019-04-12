@@ -1,4 +1,4 @@
-(function(angular) {
+(function() {
     var app = angular.module('myApp', []);
     
     var MainController = function ($scope, $http) {
@@ -23,14 +23,27 @@
 //        }
 
         $scope.message = "Teacher Front End";
-        
+        $scope.Math = window.Math;
+
         $http.get('mock.json')
         .then(function(data){
             $scope.info = data;
         });
         
-//        $scope.words = $scope.info.timestamps;
-        
+        //find the difference between timestamps to get length
+        $scope.calcDiff = function(){
+            var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds    
+            var diffDays = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay)));
+            
+            return "00:39:34";
+        }
+
+
+        $scope.update = function() {
+            var result = 0;
+            result = $scope.info.data.word_count - $scope.info.data.incorrect_count;
+            $scope.accuracy = result;
+        };
     };
     
     app.controller("MainController", MainController)
