@@ -72,8 +72,21 @@
             <tbody>
                 <tr ng-repeat="word in info.data.words">
                     <td> {{word.word_number}} </td>
-                    <td ng-if="word.accuracy == 1"> O </td>
-                    <td ng-if="word.accuracy == 0"> X </td>
+                    <td ng-if="word.accuracy == 1"> <select ng-model="repoSortOrder" ng-init="O">
+                        <option value="+O">O</option>
+                        <option value="+X">X</option>
+                        <option value="+-">-</option>
+                    </select> </td>
+                    <td ng-if="word.accuracy == 0"> <select ng-model="repoSortOrder" ng-init="X">
+                        <option value="+O">O</option>
+                        <option value="+X">X</option>
+                        <option value="+-">-</option>
+                    </select> </td>
+                    <td ng-if="word.accuracy == -"> <select ng-model="repoSortOrder" ng-init="-">
+                        <option value="+O">O</option>
+                        <option value="+X">X</option>
+                        <option value="+-">-</option>
+                    </select> </td>
                     <td> {{word.word}} </td>
                     <td> {{word.length}} </td>
                     <td> {{word.notes}} </td>
