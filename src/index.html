@@ -42,9 +42,9 @@
             <td colspan="2" id="scored-duration-field">Total Word Count</td>
             <td>{{info.data.high_frequency_score.word_count}}</td>
         </tr>
-        <tr class="score-card-item-white">
+        <tr class="score-card-item-white" ng-model='info.data.high_frequency_score.incorrect_count/info.data.high_frequency_score.word_count'>
             <td colspan="2" id="accuracy-field">Accuracy</td>
-            <td> {{ 5/9 * 100 }}%</td>
+            <td> {{100 * info.data.high_frequency_score.incorrect_count/info.data.high_frequency_score.word_count | number: 0}}%</td>
         </tr>
         <tr class="score-card-footer" style="display: none;">
             <td colspan="3"><a href="https://www.raz-kids.com/main/ViewPage/name/RunningRecordInfo/context/teachercorner" target="_blank">Learn more</a> about the Running Record Scorecard.</td>
@@ -107,4 +107,5 @@
     <input type="submit" value="Download MP3">
     <input type="submit" value="Print Result">
     <input type="submit" value="Save">
+
 </html>
