@@ -47,7 +47,6 @@
         // });
 
     };
-    
     app.controller("MainController", MainController)
     
 }());

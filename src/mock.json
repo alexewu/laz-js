@@ -5,15 +5,15 @@
             "accuracy": 1,
             "word" : "hello",
             "start_time": "00:00:00",
-            "end_time": "00:00:05",
+            "length": "00:00:05",
             "notes": "Good Work"
         },
         {
             "word_number": 2,
             "accuracy": 0,
             "word" : "the",
-            "start_time": "00:00:05",
-            "end_time": "00:00:12",
+            "start_time": "00:00:04",
+            "length": "00:00:05",
             "notes":"omission"
         },
         {
@@ -21,7 +21,7 @@
             "accuracy": 0,
             "word" : "ant",
             "start_time": "00:00:12",
-            "end_time": "00:00:33",
+            "length": "00:00:15",
             "notes":"needs improvement"
         },
         {
@@ -29,7 +29,7 @@
             "accuracy": 1,
             "word" : "are",
             "start_time": "00:00:33",
-            "end_time": "00:00:35",
+            "length": "00:00:03",
             "notes":"good"
         },
         {
@@ -37,7 +37,7 @@
             "accuracy": 0,
             "word" : "today",
             "start_time": "00:00:35",
-            "end_time": "00:00:37",
+            "length": "00:00:01",
             "notes":"perfect"
         },
         {
@@ -45,7 +45,7 @@
             "accuracy": 0,
             "word" : "fun",
             "start_time": "00:00:37",
-            "end_time": "00:00:40",
+            "length": "00:00:06",
             "notes":"good"
         },
         {
@@ -53,7 +53,7 @@
             "accuracy": 1,
             "word" : "play",
             "start_time": "00:00:40",
-            "end_time": "00:00:45",
+            "length": "00:00:03",
             "notes":"deletion"
         },
         {
@@ -61,7 +61,7 @@
             "accuracy": 1,
             "word" : "time",
             "start_time": "00:00:45",
-            "end_time": "00:00:46",
+            "length": "00:00:09",
             "notes":"extra words"
         },
         {
@@ -69,7 +69,7 @@
             "accuracy": 0,
             "word" : "yes",
             "start_time": "00:00:46",
-            "end_time": "00:00:50",
+            "length": "00:00:06",
             "notes":"good"
         }
         

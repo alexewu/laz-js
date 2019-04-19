@@ -57,7 +57,7 @@
         <br><br><br>
     </div>
         
-      <table style="width:100%">
+      <table style="width:100%" ng-model='info'>
             <thead>
                 <tr>
                     <th> ID </th>
@@ -75,7 +75,7 @@
                     <td ng-if="word.accuracy == 1"> O </td>
                     <td ng-if="word.accuracy == 0"> X </td>
                     <td> {{word.word}} </td>
-                    <td> {{word.end_time}} - {{word.start_time}} </td>
+                    <td> {{word.length}} </td>
                     <td> {{word.notes}} </td>
                     <td> 
                         <input type="submit" value="Play"> 
