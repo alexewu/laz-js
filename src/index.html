@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html ng-app="myApp">
+<html>
 
   <head class="content">
     <link rel="stylesheet" href="style.css">
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <script src="mainController.js"></script>
   </head>
 
-  <body ng-controller="MainController" class="content">
+  <body ng-app="myApp">
     
-    <h1>RECORDING REVIEW FOR ZACHARY SMITH</h1>
+    <!-- <h1>RECORDING REVIEW FOR ZACHARY SMITH</h1>
 
     <div class="box border box-bg marginT padAll2">
         <strong>Title:</strong> High-Frequency Words Assessment Set A        &nbsp;|&nbsp;
@@ -99,26 +98,27 @@
                 </tr>
             </tbody>
         </table>
+        <br><br>
+            <div class="box-50 padR4 borderR">
+                <label class="box lg" for="message">
+                    <strong>Message to Student</strong> (optional)
+                </label>
+                <textarea class="marginB input-fullWidth textarea-autogrow" name="message_to_student" id="message_to_student" maxlength="250" style="overflow: hidden; min-height: 2em;">Good Work!</textarea><div class="autogrow-textarea-mirror" style="display: none; word-wrap: break-word; padding: 4px 6px; width: 521px; font-family: &quot;Roboto Condensed&quot;, sans-serif; font-size: 15px; line-height: 21px;">Good Work!.<br>.</div>
+            </div>
 
+            <div class="box-50 padL4">
+                <label class="box lg">
+                    <strong>Note to Self</strong> (optional)
+                </label>
+                <textarea class="input-fullWidth textarea-autogrow" name="note_to_self" id="note_to_self" maxlength="250" style="overflow: hidden; min-height: 2em;"></textarea><div class="autogrow-textarea-mirror" style="display: none; word-wrap: break-word; padding: 4px 6px; width: 522px; font-family: &quot;Roboto Condensed&quot;, sans-serif; font-size: 15px; line-height: 21px;">.<br>.</div>
+            </div>
+
+            <input type="submit" value="Download MP3">
+            <input type="submit" value="Print Result">
+            <input type="submit" value="Save"> -->
+            <table-mdp></table-mdp>
   </body>
-
-  <br><br>
-    <div class="box-50 padR4 borderR">
-        <label class="box lg" for="message">
-            <strong>Message to Student</strong> (optional)
-        </label>
-        <textarea class="marginB input-fullWidth textarea-autogrow" name="message_to_student" id="message_to_student" maxlength="250" style="overflow: hidden; min-height: 2em;">Good Work!</textarea><div class="autogrow-textarea-mirror" style="display: none; word-wrap: break-word; padding: 4px 6px; width: 521px; font-family: &quot;Roboto Condensed&quot;, sans-serif; font-size: 15px; line-height: 21px;">Good Work!.<br>.</div>
-    </div>
-
-    <div class="box-50 padL4">
-        <label class="box lg">
-            <strong>Note to Self</strong> (optional)
-        </label>
-        <textarea class="input-fullWidth textarea-autogrow" name="note_to_self" id="note_to_self" maxlength="250" style="overflow: hidden; min-height: 2em;"></textarea><div class="autogrow-textarea-mirror" style="display: none; word-wrap: break-word; padding: 4px 6px; width: 522px; font-family: &quot;Roboto Condensed&quot;, sans-serif; font-size: 15px; line-height: 21px;">.<br>.</div>
-    </div>
-
-    <input type="submit" value="Download MP3">
-    <input type="submit" value="Print Result">
-    <input type="submit" value="Save">
-
+    <script src="mainController.js"></script>
+    <script src="table-mdp.component.js"></script>
+    <script src="lazmdp.service.js"></script>
 </html>

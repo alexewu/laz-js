@@ -1,9 +1,8 @@
 (function() {
     var app = angular.module('myApp', []);
     
-    var MainController = function ($scope, $http) {
-        
-        console.log("hi");
+    app.controller('mainController', function($scope, $http) {
+        console.log("you are inside mainController function``");
         var onUserComplete = function(response) {
             $scope.user = response.data;
             $http.get($scope.user.timestamps)
@@ -18,35 +17,25 @@
             $scope.error = "Could not read";
         };
         
-//        $scope.search = function() {
-//            $http.get('mock.json')
-//            .then(onUserComplete, onError)
-//        }
-        // console.log("BLAH");
         $scope.message = "Teacher Front End";
         $scope.Math = window.Math;
 
-        $http.get('mock.json')
-        .then(function(data){
-            $scope.info = data;
-        });
-        
-        // $http.get("http://mdp.learninga-z.com/api/timestamps/")
+        // $http.get('mock.json')
         // .then(function(data){
-        //     console.log(data);
         //     $scope.info = data;
         // });
-
-        // $http({
-        //     method: 'GET',
-        //     url: 'http://mdp.learninga-z.com/api/timestamps/',
-        //     credentials: 'Access-Control-Allow-Origin'
-        // }).then(function(data){
-        //     console.log(data);
-        //     $scope.info = data;
-        // });
-
-    };
-    app.controller("MainController", MainController)
+        
+        try{
+            $http.get("http://mdp.learninga-z.com/api/timestamps/")
+            .then(function(data){
+                console.log("you have reached our wanted api call");
+                console.log(data);
+                $scope.info = data;
+            });
+        }
+        catch (err){
+            console.log("u failed" + err);
+        }
+    });
     
 }());
