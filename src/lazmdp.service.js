@@ -11,7 +11,7 @@
         function getTimestamps(uri, type){
 
             var req = {
-                url: "http://mdp.learninga-z.com/api/timestamps/",
+                url: "/api/timestamps/",
                 type: "GET",
                 dataType: "json",
             };
